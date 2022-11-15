@@ -33,6 +33,10 @@ public class ModuleController {
     @RequestMapping(method = RequestMethod.PUT ,  value = "/modules/{id}")
     public void modifierModule(@RequestBody Module module , @PathVariable Integer id) {
         moduleService.modiferModule(id,module);
+    }
 
+    @RequestMapping(method = RequestMethod.DELETE ,  value = "/modules/{id}")
+    public void supprimerModule(@PathVariable Integer id) {
+        moduleService.supprimerModule(id);
     }
 }

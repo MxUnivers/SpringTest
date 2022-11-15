@@ -49,4 +49,8 @@ public class ModuleService {
         }
     }
 
+    public void supprimerModule(Integer id ){
+        modules.removeIf(m->id.equals(m.getId()));
+    }
+
 }
