@@ -24,8 +24,8 @@ public class ModuleController {
     }
 
     @RequestMapping("/modules/{id}")
-    public Module getModule(@PathVariable InternalError id){
-        return moduleService.getModule(1);
+    public Module getModule(@PathVariable Integer id){
+        return moduleService.getModule(id);
     }
 
 }
