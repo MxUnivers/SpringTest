@@ -3,13 +3,14 @@ package com.ensias.srpingbooinit.service;
 import com.ensias.srpingbooinit.models.Module;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class ModuleService {
 
-    private List<Module> modules = Arrays.asList(
+    private List<Module> modules = new ArrayList<>(Arrays.asList(
                 new Module(
                         1,"Aymar 1","description du trire 1"
                 ),
@@ -19,7 +20,7 @@ public class ModuleService {
                 new Module(
                         3,"Aymar 3","description du trire 3"
                 )
-        );
+        ));
 
     public List<Module> getModules(){
         return modules ;
@@ -33,4 +34,9 @@ public class ModuleService {
         }
         return null;
     }
+
+    public void ajouterModule(Module module){
+        modules.add(module);
+    }
+
 }
