@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 @RestController
 public class ModuleController {
 
@@ -29,6 +28,11 @@ public class ModuleController {
     @RequestMapping(method = RequestMethod.POST ,  value = "/modules")
     public void ajouterModule(@RequestBody Module module) {
         moduleService.ajouterModule(module);
+
+    }
+    @RequestMapping(method = RequestMethod.PUT ,  value = "/modules/{id}")
+    public void modifierModule(@RequestBody Module module , @PathVariable Integer id) {
+        moduleService.modiferModule(id,module);
 
     }
 }

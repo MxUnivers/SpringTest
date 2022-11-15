@@ -39,4 +39,14 @@ public class ModuleService {
         modules.add(module);
     }
 
+    public void modiferModule(Integer id ,Module module){
+        for (int i=0 ; i < modules.size() ;  i++){
+            Module m =  modules.get(i);
+            if(id.equals(m.getId())){
+                modules.set(i,module);
+                return;
+            }
+        }
+    }
+
 }
