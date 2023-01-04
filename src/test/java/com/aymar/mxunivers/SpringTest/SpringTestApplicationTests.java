@@ -1,13 +1,13 @@
-package com.ensias.srpingbooinit;
+package com.aymar.mxunivers.SpringTest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SrpingBooInitApplicationTests {
+class SpringTestApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }
